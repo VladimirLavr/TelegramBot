@@ -18,5 +18,3 @@ if ($text == '/start') {
     $reply = 'Hello' . $name;
     $telegram->sendMessage(['chat_id' => $chat_id, 'text' => $reply]);
 }
-$mes = $telegram->sendMessage(['chat_id' => $chat_id, 'text' => $reply]);
-var_dump($mes);
