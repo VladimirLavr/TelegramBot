@@ -14,7 +14,7 @@ $name = $result['message']['from']['username'];
 $first_name = $result['message']['from']['first_name'];
 $last_name = $result['message']['from']['last_name'];
 
-if ($text == '/start') {
+if ($text == 'Hello') {
     $reply = 'Hello' . $name;
     $telegram->sendMessage(['chat_id' => $chat_id, 'text' => $reply]);
 }
