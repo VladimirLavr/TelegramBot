@@ -1,20 +1,18 @@
-<?php
 
+<?php
 require 'vendor/autoload.php';
 
 use Telegram\Bot\Api;
 
-$telegram = new Api('6268064568:AAG-9HsCU0av9zEveVTVo1O-wG9qzHFBVWI');
+
+$telegram = new Api('6280488506:AAFtVTmxR-S021zN2gopg1iHyxHK290TU9g');
 
 $result = $telegram->getWebhookUpdates();
 
 $text = $result['message']['text'];
 $chat_id = $result['message']['chat']['id'];
 $name = $result['message']['from']['username'];
-$first_name = $result['message']['from']['first_name'];
-$last_name = $result['message']['from']['last_name'];
 
-if ($text == 'Hello') {
-    $reply = 'Hello' . $name;
-    $telegram->sendMessage(['chat_id' => $chat_id, 'text' => $reply]);
-}
+
+$reply = 'HElLO';
+$telegram->sendMessage(['chat_id' => $chat_id, 'text' => $reply]);
